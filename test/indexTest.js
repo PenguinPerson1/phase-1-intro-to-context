@@ -236,6 +236,7 @@ describe("The payroll system", function () {
         let employees = [sRecord, rRecord]
         let grandTotalOwed = employees.reduce((m, e) => m + allWagesFor(e), 0)
         expect(grandTotalOwed).to.equal(calculatePayroll(employees))
+        console.log("correct = " + grandTotalOwed);
       })
     })
   })
